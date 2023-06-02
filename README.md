@@ -11,21 +11,28 @@ npm install pmn-rn-component
 ## Usage
 
 ```js
-import { multiply } from 'pmn-rn-component';
+import * as React from 'react';
+import {
+  Box,
+  Text,
+  fontSizeLine,
+  getOffset,
+  heightLize,
+  widthLize,
+} from 'pmn-rn-component';
 
 // ...
 
-const result = await multiply(3, 7);
+export default function App() {
+  console.log(getOffset());
+  return (
+    <Box flex={1} middle center>
+      <Box height={heightLize(50)} width={widthLize(50)} />
+      <Text size={fontSizeLine(20)} color="#000">
+        Hello
+      </Text>
+    </Box>
+  );
+}
+
 ```
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)

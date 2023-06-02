@@ -1,29 +1,13 @@
-import { NativeModules, Platform } from 'react-native';
-
-const LINKING_ERROR =
-  `The package 'pmn-rn-component' doesn't seem to be linked. Make sure: \n\n` +
-  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
-  '- You rebuilt the app after installing the package\n' +
-  '- You are not using Expo Go\n';
-
-// @ts-expect-error
-const isTurboModuleEnabled = global.__turboModuleProxy != null;
-
-const PmnRnComponentModule = isTurboModuleEnabled
-  ? require('./NativePmnRnComponent').default
-  : NativeModules.PmnRnComponent;
-
-const PmnRnComponent = PmnRnComponentModule
-  ? PmnRnComponentModule
-  : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
-
-export function multiply(a: number, b: number): Promise<number> {
-  return PmnRnComponent.multiply(a, b);
-}
+export * from './Box';
+export * from './Circle';
+export * from './Text';
+export * from './types';
+export * from './Provider';
+export * from './Alert';
+export * from './Button';
+export * from './Input';
+export * from './Utils';
+export * from './Popup';
+export * from './Thumb';
+export * from './Responsive';
+export * from './IphoneXHelper';

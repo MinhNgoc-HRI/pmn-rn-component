@@ -1,31 +1,21 @@
 import * as React from 'react';
-
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'pmn-rn-component';
+import {
+  Box,
+  Text,
+  fontSizeLine,
+  getOffset,
+  heightLize,
+  widthLize,
+} from 'pmn-rn-component';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
+  console.log(getOffset());
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <Box flex={1} middle center>
+      <Box height={heightLize(50)} width={widthLize(50)} />
+      <Text size={fontSizeLine(20)} color="#000">
+        Hello
+      </Text>
+    </Box>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
-});
