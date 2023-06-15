@@ -5,7 +5,7 @@ RN Component
 ## Installation
 
 ```sh
-npm install pmn-rn-component
+yarn add pmn-rn-component react-native-fast-image 
 ```
 
 ## Usage
