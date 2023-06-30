@@ -1,3 +1,4 @@
+import Thumb, { ThumbProps } from './Thumb';
 export * from './Box';
 export * from './Circle';
 export * from './Text';
@@ -11,3 +12,4 @@ export * from './Popup';
 export * from './Thumb';
 export * from './Responsive';
 export * from './IphoneXHelper';
+export { Thumb, ThumbProps };
