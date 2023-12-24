@@ -1,6 +1,6 @@
 {
   "name": "pmn-rn-component",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "test",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -79,7 +79,10 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "lodash.isequal": ">=4.5.0",
+    "react-native-fast-image": ">=8.6.3",
+    "react-native-linear-gradient": ">=2.6.2"
   },
   "engines": {
     "node": ">= 16.0.0"
@@ -162,10 +165,5 @@
     "name": "RNPmnRnComponentSpec",
     "type": "modules",
     "jsSrcsDir": "src"
-  },
-  "dependencies": {
-    "lodash.isequal": "^4.5.0",
-    "react-native-fast-image": "^8.6.3",
-    "react-native-linear-gradient": "^2.6.2"
   }
 }
